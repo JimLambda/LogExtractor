@@ -118,7 +118,8 @@ namespace LogExtractor
             Console.WriteLine("-----------------------------------------------------------------------------------------");
             foreach (BondForceCalibrationData bondForceData in bondForceResults)
             {
-                Console.WriteLine($"Time: {bondForceData.Time} | bfc_0g_current: {bondForceData.bfc_0g_current} | bfc_scale_fct: {bondForceData.bfc_scale_fct} | forceSensorSlope: {bondForceData.forceSensorSlope}");
+                //Console.WriteLine($"Time: {bondForceData.Time} | bfc_0g_current: {bondForceData.bfc_0g_current} | bfc_scale_fct: {bondForceData.bfc_scale_fct} | forceSensorSlope: {bondForceData.forceSensorSlope}");
+                bondForceData.Display();
             }
         }
 
@@ -128,7 +129,8 @@ namespace LogExtractor
             Console.WriteLine("-----------------------------------------------------------------------------------------");
             foreach (LowFrequencyImpedanceData impedanceData in impedanceResults)
             {
-                Console.WriteLine($"Time: {impedanceData.Time} | Impedance: {impedanceData.ImpedanceValue}");
+                //Console.WriteLine($"Time: {impedanceData.Time} | Impedance: {impedanceData.ImpedanceValue}");
+                impedanceData.Display();
             }
         }
     }
